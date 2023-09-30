@@ -1,0 +1,134 @@
+.listings-cont{
+    margin: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    & .listing-item{
+        padding: 1.5rem;
+        background-color: $Light-Grayish-Cyan2;
+        border-left: solid 6px $Desaturated-Dark-Cyan; 
+        border-radius: .3rem;
+    }
+    & .listings-image{
+        margin-top: -3rem;
+        width: 4rem;
+    }
+    & .a{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        & h2{
+            color: $Desaturated-Dark-Cyan;
+        }
+        & .featured-cont{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #fff;
+            & span{
+                background-color: $Desaturated-Dark-Cyan;
+                padding: .5rem .7rem;
+                font-size: 1.1rem;
+                border-radius: 1rem;
+                text-transform: uppercase;
+            }
+            & .featured{
+                background-color: $Very-Dark-Grayish-Cyan;
+            }
+
+        }
+    }
+
+    & .person-title{
+        color: $Very-Dark-Grayish-Cyan;
+        text-transform: capitalize;
+    }
+    & .time-posted-and-location{
+        color: $Dark-Grayish-Cyan;
+        text-transform: capitalize;
+        font-size: 1.1rem;
+        font-weight: 400;
+        & .dots{
+            font-size: 2.2rem;
+        }
+    }
+    & hr{
+        margin-top: 1.2rem;
+        border: solid px $Dark-Grayish-Cyan;
+    }
+
+    & .skills{
+        & ul{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 1rem;
+            margin-right: 3rem;
+            & li{
+                list-style-type: none;
+                text-transform: capitalize;
+                color: $Desaturated-Dark-Cyan;
+                font-size: 1.2rem;
+                background-color:hsla(180, 29%, 50%, 0.137);
+                padding: .4rem ;
+                text-align: center;
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: $Desaturated-Dark-Cyan;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 769px){
+    .listings-cont{
+        & .listing-item{
+            & .skills{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    }
+   
+}
+@media(min-width:1234px){
+    .listings-cont{
+        width: 76%;
+        margin: 4rem auto;
+        gap: 2rem;
+        box-shadow: 1px 1px 30px hsla(180, 27%, 31%, 0.267);
+    }
+    .listing-item{
+        display: grid;
+        padding: 1rem;
+        align-items: center;
+        grid-template-columns: repeat(2,1fr);
+        
+
+        & .listings-image{
+            margin: 0;
+            padding: 0;
+
+        }
+        & .title-and-info{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        & .person-title{
+            margin-top: -.15rem;
+        }
+        & hr{
+            display: none;
+        } 
+        & .skills{
+            & ul{
+                grid-template-columns: repeat(5,1fr);
+                overflow: auto;
+            }
+        }
+    }
+   
+}

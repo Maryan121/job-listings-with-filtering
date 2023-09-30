@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+.listings-cont {
+  margin: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.listings-cont .listing-item {
+  padding: 1.5rem;
+  background-color: hsl(180, 31%, 95%);
+  border-left: solid 6px hsl(180, 29%, 50%);
+  border-radius: 0.3rem;
+}
+.listings-cont .listings-image {
+  margin-top: -3rem;
+  width: 4rem;
+}
+.listings-cont .a {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.listings-cont .a h2 {
+  color: hsl(180, 29%, 50%);
+}
+.listings-cont .a .featured-cont {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+}
+.listings-cont .a .featured-cont span {
+  background-color: hsl(180, 29%, 50%);
+  padding: 0.5rem 0.7rem;
+  font-size: 1.1rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+}
+.listings-cont .a .featured-cont .featured {
+  background-color: hsl(180, 14%, 20%);
+}
+.listings-cont .person-title {
+  color: hsl(180, 14%, 20%);
+  text-transform: capitalize;
+}
+.listings-cont .time-posted-and-location {
+  color: hsl(180, 8%, 52%);
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.listings-cont .time-posted-and-location .dots {
+  font-size: 2.2rem;
+}
+.listings-cont hr {
+  margin-top: 1.2rem;
+  border: solid px hsl(180, 8%, 52%);
+}
+.listings-cont .skills ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-right: 3rem;
+}
+.listings-cont .skills ul li {
+  list-style-type: none;
+  text-transform: capitalize;
+  color: hsl(180, 29%, 50%);
+  font-size: 1.2rem;
+  background-color: hsla(180, 29%, 50%, 0.137);
+  padding: 0.4rem;
+  text-align: center;
+}
+.listings-cont .skills ul li:hover {
+  cursor: pointer;
+  background-color: hsl(180, 29%, 50%);
+  color: #fff;
+}
+
+@media (min-width: 769px) {
+  .listings-cont .listing-item .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1234px) {
+  .listings-cont {
+    width: 76%;
+    margin: 4rem auto;
+    gap: 2rem;
+    box-shadow: 1px 1px 30px hsla(180, 27%, 31%, 0.267);
+  }
+  .listing-item {
+    display: grid;
+    padding: 1rem;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .listing-item .listings-image {
+    margin: 0;
+    padding: 0;
+  }
+  .listing-item .title-and-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .listing-item .person-title {
+    margin-top: -0.15rem;
+  }
+  .listing-item hr {
+    display: none;
+  }
+  .listing-item .skills ul {
+    grid-template-columns: repeat(5, 1fr);
+    overflow: auto;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+  background: hsla(180, 8%, 52%, 0.308);
+}
+
+.container .header {
+  background-color: hsl(180, 29%, 50%);
+  position: relative;
+}
+.container .header .bg-desktop {
+  display: none;
+}
+.container .header img {
+  width: 100%;
+  height: 25vh;
+}
+.container .header .form {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -1rem;
+  left: 18%;
+  display: none;
+}
+.container .header input {
+  border: none;
+  outline: none;
+  color: hsl(180, 29%, 50%);
+  padding: 0.7rem 1rem;
+  border-radius: 0.4rem 0 0 0.4rem;
+  width: 70%;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.container .header button {
+  border: none;
+  background: none;
+  background-color: hsl(180, 14%, 20%);
+  color: #fff;
+  border-radius: 0 0.4rem 0.4rem 0;
+  font-weight: 500;
+  cursor: pointer;
+}
+.container .header button:hover {
+  color: hsl(180, 29%, 50%);
+}
+
+@media (min-width: 769px) {
+  .container .header {
+    background-color: hsl(180, 29%, 50%);
+  }
+  .container .header .form {
+    left: 40%;
+  }
+  .container .header .form input {
+    width: 100%;
+  }
+  .container .header .bg-desktop {
+    display: block;
+  }
+  .container .header .bg-mobile {
+    display: none;
+  }
+}/*# sourceMappingURL=main.css.map */
