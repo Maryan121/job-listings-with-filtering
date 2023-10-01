@@ -1,6 +1,7 @@
-fetch('../data.json')
+ fetch('../data.json')
   .then(res => res.json())
   .then(data => {
+    
     let listingsContainer = document.createElement('div');
     listingsContainer.classList.add("listings-cont");
 
@@ -61,7 +62,7 @@ fetch('../data.json')
       })
     })
 
-    function filterListings(filterText) {
+     function filterListings(filterText) {
       const listingItems = document.querySelectorAll('.listing-item');
       listingItems.forEach((item) => {
         const skillsText = item.querySelector('.skills').textContent.toLowerCase();
@@ -74,8 +75,7 @@ fetch('../data.json')
     }
 
 
-  });
-
+  })
 
 
   // for(let i=0; i<skillsBtns.length; i++){
